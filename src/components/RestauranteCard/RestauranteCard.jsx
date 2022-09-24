@@ -17,7 +17,7 @@ function RestauranteCard({ restaurante }) {
           {restaurante.tempo_medio} -{" "}
           {restaurante.valor_entrega === 0.0
             ? "Grátis"
-            : `R$${restaurante.valor_entrega}`}
+            : `R$${restaurante.valor_entrega?.toFixed(2)}`}
         </p>
       </div>
     </div>
