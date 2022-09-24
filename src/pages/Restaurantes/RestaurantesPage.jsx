@@ -34,30 +34,40 @@ function RestaurantesPage() {
           <CircularProgress color="primary" />
         </div>
       )}
-      <div className="sub-header">
-        <Typography variant="body1" color="primary">
-          Baratinho <span>(</span>$ <span>$ $ $ $)</span>
-        </Typography>
+
+      <div className="restaurante__categoria--wrapper">
+        <div className="sub-header">
+          <Typography variant="body1" color="primary">
+            Baratinho <span>(</span>$ <span>$ $ $ $)</span>
+          </Typography>
+        </div>
+        {restaurantesBaratinho?.map(restaurante => (
+          <RestauranteCard restaurante={restaurante} />
+        ))}
       </div>
-      {restaurantesBaratinho?.map(restaurante => (
-        <RestauranteCard restaurante={restaurante} />
-      ))}
-      <div className="sub-header">
-        <Typography variant="body1" color="primary">
-          No Preço <span>(</span>$ <span>$ $ $ $)</span>
-        </Typography>
+
+      <div className="restaurante__categoria--wrapper">
+        <div className="sub-header">
+          <Typography variant="body1" color="primary">
+            No Preço <span>(</span>$ <span>$ $ $ $)</span>
+          </Typography>
+        </div>
+        {restaurantesNoPreco?.map(restaurante => (
+          <RestauranteCard restaurante={restaurante} />
+        ))}
       </div>
-      {restaurantesNoPreco?.map(restaurante => (
-        <RestauranteCard restaurante={restaurante} />
-      ))}
-      <div className="sub-header">
-        <Typography variant="body1" color="primary">
-          Caro <span>(</span>$ <span>$ $ $ $)</span>
-        </Typography>
+
+      <div className="restaurante__categoria--wrapper">
+        <div className="sub-header">
+          <Typography variant="body1" color="primary">
+            Caro, mas vale a pena <span>(</span>$ <span>$ $ $ $)</span>
+          </Typography>
+        </div>
+        {restaurantesCaro?.map(restaurante => (
+          <RestauranteCard restaurante={restaurante} />
+        ))}
       </div>
-      {restaurantesCaro?.map(restaurante => (
-        <RestauranteCard restaurante={restaurante} />
-      ))}
+
     </Container>
   )
 }
