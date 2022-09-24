@@ -21,6 +21,7 @@ function RestaurantesPage() {
       setRestaurantesNoPreco(response.no_preco);
       setRestaurantesCaro(response.caro);
       setLoading(false);
+      console.log(response);
     })
   }, [id]);
 
@@ -49,7 +50,7 @@ function RestaurantesPage() {
       <div className="restaurante__categoria--wrapper">
         <div className="sub-header">
           <Typography variant="body1" color="primary">
-            No Preço <span>(</span>$ <span>$ $ $ $)</span>
+            No Preço <span>(</span>$ $ $ <span>$ $)</span>
           </Typography>
         </div>
         {restaurantesNoPreco?.map(restaurante => (
@@ -60,7 +61,7 @@ function RestaurantesPage() {
       <div className="restaurante__categoria--wrapper">
         <div className="sub-header">
           <Typography variant="body1" color="primary">
-            Caro, mas vale a pena <span>(</span>$ <span>$ $ $ $)</span>
+            Caro, mas vale a pena <span>(</span>$ $ $ $ $ <span>)</span>
           </Typography>
         </div>
         {restaurantesCaro?.map(restaurante => (
