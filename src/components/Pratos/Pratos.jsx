@@ -1,4 +1,5 @@
 import React from "react";
+import styles from './Pratos.module.css'
 
 function Pratos({ prato }) {
   return (
@@ -9,10 +10,11 @@ function Pratos({ prato }) {
       <div className="restaurante__card--content">
         <h2>{prato.nome}</h2>
         <p>{prato.descricao}</p>
+        <div className={styles.preco}>
+          <p>{prato.valor}</p>
+        </div>
       </div>
-      <div>
-        <h2>{prato.valor}</h2>
-      </div>
+      
     </div>
   );
 }

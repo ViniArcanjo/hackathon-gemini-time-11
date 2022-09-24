@@ -1,0 +1,43 @@
+.restaurante__card {
+  background-color: rgba(217, 217, 217, 0.21);
+  border-radius: 5px;
+  display: flex;
+}
+
+.restaurante__card--img {
+  max-width: 90px;
+  display: flex;
+  align-items: center;
+}
+
+.restaurante__card--img > img {
+  width: 100%;
+  border-radius: 5px 0 0 5px;
+}
+
+.restaurante__card--content {
+  color: #828282;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 7px 0 9px 11px;
+}
+
+.restaurante__card--content h2,
+.restaurante__card--content p {
+  margin: 0;
+}
+
+.restaurante__card--content h2 {
+  font-size: 14px;
+}
+
+.preco {
+  display: flex;
+  height: 100%;
+  font-size: 14px;
+  justify-content: flex-end;
+  margin-right: 12px;
+  font-weight: 700;
+}
