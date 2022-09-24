@@ -1,9 +1,10 @@
 import React from "react"
-import { Container, CircularProgress } from "@material-ui/core";
+import { CircularProgress } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import RestauranteCard from "../../components/RestauranteCard";
 import { getDetalhes } from "../../services/detalhes.service";
+import styles from "./RestauranteDetalhe.module.css";
 
 
 function RestauranteDetalhe() {
@@ -22,7 +23,7 @@ function RestauranteDetalhe() {
       }, [id]);
 
     return (
-        <Container class="restaurantes">
+        <div className={styles.container}>
             <div>
                 {loading && (
                     <div className="loading">
@@ -32,12 +33,12 @@ function RestauranteDetalhe() {
                 <div>
                     <RestauranteCard restaurante={restaurante} />
                 </div>
-                <div>
+                <div className={styles.infos}>
                     <p>{restaurante.descricao}</p>
                     <p>{restaurante.endereco}</p>
                 </div>
             </div>
-        </Container>
+        </div>
     )
 
 }
