@@ -40,7 +40,7 @@ function RestaurantesPage() {
         </Typography>
       </div>
       {restaurantesBaratinho?.map(restaurante => (
-        <RestauranteCard restaurante={restaurante}/> 
+        <RestauranteCard restaurante={restaurante} />
       ))}
       <div className="sub-header">
         <Typography variant="body1" color="primary">
@@ -48,9 +48,7 @@ function RestaurantesPage() {
         </Typography>
       </div>
       {restaurantesNoPreco?.map(restaurante => (
-        <div key={restaurante.id}>
-          {restaurante.nome}
-        </div>
+        <RestauranteCard restaurante={restaurante} />
       ))}
       <div className="sub-header">
         <Typography variant="body1" color="primary">
@@ -58,9 +56,7 @@ function RestaurantesPage() {
         </Typography>
       </div>
       {restaurantesCaro?.map(restaurante => (
-        <div key={restaurante.id}>
-          {restaurante.nome}
-        </div>
+        <RestauranteCard restaurante={restaurante} />
       ))}
     </Container>
   )
