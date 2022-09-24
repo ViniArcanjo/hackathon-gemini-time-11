@@ -7,10 +7,14 @@
 }
 
 .full-height .title-home {
-  padding: 41px 0 17px 0;
+  padding: 41px 44px 17px;
   display: flex;
   min-height: 64px;
   justify-content: center;
+}
+
+.full-height .title-home h5 {
+  padding: 0;
 }
 
 .full-height .MuiTypography-h5 {
@@ -20,11 +24,11 @@
 .full-height .subtitle {
   padding-bottom: 14px;
   min-height: 62px;
-  max-width: 20px;
+  max-width: 320vw;
 }
 
 .full-height .descricao {
-  min-height: 140px;
+  font-size: 10px;
 }
 
 .full-height .actions {
@@ -44,6 +48,7 @@
 
 .full-height .main-image {
   width: 100%;
+  margin-top: -64px;
 }
 
 .loading {
