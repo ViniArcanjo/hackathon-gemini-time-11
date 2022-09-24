@@ -22,7 +22,8 @@ function BannersPage() {
 
   const getBanners = async () => {
     const result = await getAllBanners();
-    setListaBanners(result.data);
+    let filtrado = result.data.filter(banner => !banner.nome.includes("UNTER LANCHES"))
+    setListaBanners(filtrado);
     setLoading(false);
   };
 
