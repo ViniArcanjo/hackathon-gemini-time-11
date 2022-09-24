@@ -7,7 +7,7 @@ import "./style.css";
 
 function RestaurantesPage() {
   const [nomeCategoria, setNomeCategoria] = useState([]);
-  const [restaurantesBaratinho, setRestaurantesBaratinho] = useState();
+  const [restaurantesBaratinho, setRestaurantesBaratinho] = useState([]);
   const [restaurantesNoPreco, setRestaurantesNoPreco] = useState([]);
   const [restaurantesCaro, setRestaurantesCaro] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -17,9 +17,9 @@ function RestaurantesPage() {
   useEffect(() => {
     getRestaurantes(id).then((response) => {
       setNomeCategoria(response.categoria)
-      setRestaurantesBaratinho(response.baratinho);
-      setRestaurantesNoPreco(response.no_preco);
-      setRestaurantesCaro(response.caro);
+      setRestaurantesBaratinho(response.baratinho || []);
+      setRestaurantesNoPreco(response.no_preco || []);
+      setRestaurantesCaro(response.caro || []);
       setLoading(false);
       console.log(response);
     })
@@ -42,7 +42,7 @@ function RestaurantesPage() {
             Baratinho <span>(</span>$ <span>$ $ $ $)</span>
           </Typography>
         </div>
-        {restaurantesBaratinho?.map(restaurante => (
+        {restaurantesBaratinho.length === 0 ? "Nenhum restaurante encontrado." : restaurantesBaratinho?.map(restaurante => (
           <RestauranteCard restaurante={restaurante} />
         ))}
       </div>
@@ -53,7 +53,7 @@ function RestaurantesPage() {
             No Preço <span>(</span>$ $ $ <span>$ $)</span>
           </Typography>
         </div>
-        {restaurantesNoPreco?.map(restaurante => (
+        {restaurantesNoPreco.length === 0 ? "Nenhum restaurante encontrado." : restaurantesNoPreco?.map(restaurante => (
           <RestauranteCard restaurante={restaurante} />
         ))}
       </div>
@@ -64,7 +64,7 @@ function RestaurantesPage() {
             Caro, mas vale a pena <span>(</span>$ $ $ $ $ <span>)</span>
           </Typography>
         </div>
-        {restaurantesCaro?.map(restaurante => (
+        {restaurantesCaro.length === 0 ? "Nenhum restaurante encontrado." : restaurantesCaro?.map(restaurante => (
           <RestauranteCard restaurante={restaurante} />
         ))}
       </div>
