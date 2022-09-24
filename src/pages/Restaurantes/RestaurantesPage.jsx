@@ -1,6 +1,7 @@
 import { Container, Typography, CircularProgress } from "@material-ui/core";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import RestauranteCard from "../../components/RestauranteCard";
 import { getRestaurantes } from "../../services/restaurantes.service";
 import "./style.css";
 
@@ -39,9 +40,7 @@ function RestaurantesPage() {
         </Typography>
       </div>
       {restaurantesBaratinho?.map(restaurante => (
-        <div key={restaurante.id}>
-          {restaurante.nome}
-        </div>
+        <RestauranteCard restaurante={restaurante}/> 
       ))}
       <div className="sub-header">
         <Typography variant="body1" color="primary">
