@@ -9,7 +9,7 @@ function Cardapio({cardapio}) {
                 <div key={index}>
                     <h2>{item.categoria}</h2>
                     <div>
-                        {item.itens?.map((prato, index) => (
+                        {item.itens.map((prato, index) => (
                           <Pratos key={index} prato={prato}/>
                           
                         ))}
