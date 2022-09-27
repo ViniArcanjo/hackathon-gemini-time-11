@@ -5,6 +5,8 @@
 .categorias .textNames {
 	text-align: center;
 	font-size: 14px;
+	width: 100%;
+	color: #828282;
 }
 
 .categorias .imgCategory {
@@ -20,4 +22,7 @@
 	flex-direction: column;
 	margin: 10px 0 5px;
 	cursor: pointer;
+	background-color: rgba(217, 217, 217, 0.21);
+	border-radius: 15px 15px 5px 5px;
+	max-width: fit-content;
 }

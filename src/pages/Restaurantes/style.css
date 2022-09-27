@@ -1,3 +1,12 @@
 .restaurantes .sub-header span {
   color: #DEDDDD;
+  font-weight: 700;
+}
+
+.restaurante__categoria--wrapper {
+  padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 21px;
 }

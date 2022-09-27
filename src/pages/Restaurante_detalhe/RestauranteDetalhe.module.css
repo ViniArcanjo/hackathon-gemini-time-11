@@ -1,0 +1,40 @@
+.container {
+  padding: 32px 32px 0;
+}
+
+.infos {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 32px 0 40px;
+  font-size: 12px;
+}
+
+.infos p:nth-child(2) {
+  font-weight: 700;
+}
+
+.busca {
+  border: 0;
+  height: 56px;
+  width: 100%;
+  background-color: #FBFBFB;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding-left: 43px;
+  max-width: calc(100vw - 64px);
+  margin: auto;
+  box-sizing: border-box;
+  background-image: url(../../assets/img/search.svg);
+  background-repeat: no-repeat;
+  background-position: 10px 18px;
+}
+
+.busca::placeholder {
+  color: #DEDDDD;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: 'Ubuntu';
+}
